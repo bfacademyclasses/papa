@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Father's Day Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Papa song audio -->
+    <audio id="bgMusic" src="song\Papa Meri Jaan - Animal 320 Kbps.mp3" loop></audio>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <h1>Happy Father's Day ❤️</h1>
+        <p>Click the button below for your surprise!</p>
+        <button id="surpriseBtn" style="display:none;">Reveal Surprise 🎁</button>
+        <div id="giftBox">
+            <h2>🏆 You are the Best Dad! 🏆</h2>
+            <p>Thank you for your endless love & support.</p>
+            <blockquote>
+                "Dad — you are my hero, my guide, <br/> My strength when I am weak, <br/> Forever grateful for your love and pride."
+            </blockquote>
+
+            <!-- Real Papa Photo -->
+            <img class="papa-photo" src="song\papa.jpg" alt="Papa Photo">
+
+            <!-- Trophy Image -->
+            <img class="gift-trophy" src="song\background.jpg" alt="Best Dad Trophy">
+
+            <button id="acceptBtn">Accept Gift</button>
+        </div>
+    </div>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

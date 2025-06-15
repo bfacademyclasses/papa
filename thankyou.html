@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+        
+        .message {
+            background: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Papa song audio -->
+    <audio id="bgMusic" src="song\Papa Meri Jaan - Animal 320 Kbps.mp3" loop></audio>
+
+    <div class="message">
+        <h1>Thank You Papa! 💙</h1>
+        <p>आपके बिना मेरी ज़िंदगी अधूरी है। आपने हमेशा मेरा हाथ थामा, मुझे संभाला और हिम्मत दी। मैं आज जो कुछ भी हूँ, वो सिर्फ़ आपकी वजह से हूँ। आपकी हर कुर्बानी, हर प्यार के लिए दिल से शुक्रिया। आप हमेशा मेरे हीरो रहेंगे! ❤️ Happy Father’s Day ❤️!</p>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+
+        // On page load, check if song should play
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('songPlaying') === 'true') {
+                bgMusic.play();
+            }
+        });
+
+        // When user clicks back to home, clear songPlaying flag
+        const backToHome = document.querySelector('a[href="index.html"]');
+        backToHome.addEventListener('click', () => {
+            localStorage.removeItem('songPlaying');
+            bgMusic.pause();
+            bgMusic.currentTime = 0;
+        });
+    </script>
+</body>
+
+</html>
